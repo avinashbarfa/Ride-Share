@@ -1,0 +1,91 @@
+.login-section form label, input {
+    font-size: 14px;
+}
+.register-section {
+	background: #263238;
+}
+
+.register-section h1 {
+    color: white;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+} 
+
+.signup-screen {
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+    background-color: #2c3940;
+    box-shadow: 0 1px 6px rgba(0,0,0,.3);
+    color: white;
+}
+
+/******************* index-page ****************************/
+.login-section {
+    background: #f5f7f8;
+    min-height: 760px;
+}  
+
+.login-section h1 {
+    margin: 0;
+    color: white;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+}
+
+.login-screen {
+    max-width: 480px;
+    background: #2c3940;
+    padding: 58px;
+    padding-top: 24px;
+    padding-bottom: 84px;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.3);
+    color: white;
+    margin-top: 116px;
+}
+
+
+footer {
+    color: #fff;
+   background: #303e45;
+}
+
+
+
+.nav-section {
+    color: #fff;
+    background: #4d636f;
+    font-size: 40px;
+    padding-left: 64px;
+}
+.nav-section a { 
+    color: #fff;
+    text-decoration: none;
+}
+.nav-section a:hover { 
+    color: #fff;
+    text-decoration: none;
+}
+.nav-section i {
+    /*font-size: 40px;*/
+    margin-top: 12px;
+    margin-bottom: 0px;
+    margin-left: 22px;
+    margin-right: 12px;
+    color: #fff;
+}
+
+form {
+    padding-top: 40px;
+}
+
+button {
+    float: right;
+}
