@@ -14,8 +14,8 @@
           <img src="img/login-background.jpg">
         </div>
         <a href="#!user"><img class="circle" src="img/avi.jpg"></a>
-        <a href="#!name"><span class="white-text name">Avinash Barfa</span></a>
-        <a href="#!email"><span class="white-text number">avibarfa98@gmail.com</span></a>
+        <a href="#!name"><span class="white-text name"><?php echo $firstname .' '. $lastname;?></span></a>
+        <a href="#!email"><span class="white-text number"><?php echo $mobile;?></span></a>
       </div>
     </li>
     <li><a class="waves-effect" href="profile.php"><i class="material-icons">perm_identity</i>Update Profile</a></li>

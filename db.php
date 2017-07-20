@@ -2,7 +2,7 @@
 	$servername="localhost";
 	$username="root";
 	$password="";
-	$dbname ="Share";
+	$dbname ="share";
 
 	$conn = new mysqli($servername,$username,$password,$dbname);
  		

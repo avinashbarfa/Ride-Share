@@ -54,6 +54,7 @@
               </div>
             </div>
 
+            <p style="float: left">Already a member? <a href="index.php">Sign In now.</a></p>
             <button class="btn waves-effect waves-light" type="submit" name="action" id="register">Register
               <i class="material-icons right">send</i>
             </button>
@@ -76,8 +77,8 @@
           data: $('form').serialize(),
           dataType: "text",
           success: function(strmessage) {
-            $('#message').text(strmessage)
-          }
+            $('#message').text(strmessage)  
+          } 
         })
       })
     })

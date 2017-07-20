@@ -1,30 +1,23 @@
 <?php
-	include ('db.php');
-	session_start();
-	if($_SERVER['REQUEST_METHOD']=="POST" && !empty($_POST['username']) && !empty($_POST['pass']))
-	{
-		$session_id=mysqli_real_escape_string($conn,$_POST['username']);
-		$session_pass=mysqli_real_escape_string($conn,$_POST['pass']);
-
-		$sql ="SELECT userid FROM UserInfo WHERE mobile ='$session_id' and password='$session_pass'";
-
-		$fetch=mysqli_query($conn,$sql);
-		$row = mysqli_fetch_array($fetch,MYSQLI_ASSOC);
-		$active = $row['active'];
-		$count= mysqli_num_rows($fetch);
-		if($count == 1)
-		{
-			$_SESSION['login_user']=$session_id;
-			header("Location: dashboard.php");
-		}
-		else
-		{
-			echo "password not match";
-		}
-	}
-	else
-	{
-		echo "Error In login";
-	}
-	$conn -> close();
+   include("db.php");
+   session_start();
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $myusername = $_POST['username'];
+      $mypassword = $_POST['pass']; 
+      
+      $query = "SELECT userid FROM userinfo WHERE mobile = '$myusername' and password = '$mypassword'";
+      $result = mysqli_query($conn, $query);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $active = $row['userid'];
+      $count = mysqli_num_rows($result);
+   
+      if($count == 1) {
+         $_SESSION['session_userid'] = $active;
+         header('location: dashboard.php');
+      }else {
+        $message = "Your Login Name or Password is invalid";
+      }
+   }
 ?>

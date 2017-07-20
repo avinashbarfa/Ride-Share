@@ -1,3 +1,4 @@
+<?php include 'session.php';?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,41 +13,42 @@
 <body>
 	
 	<?php include 'navigation.php'; ?>
+
   <div class="profile-section">
     <div class="container">
       <div class="profile-screen">
         <form method="POST">
            <div class="row">
               <div class="input-field col s3">
-                <input id="first_name" type="text" class="validate" name="firstname" required="required">
+                <input id="first_name" type="text" class="validate" name="firstname" value="<?php echo $firstname;?>" required="required">
                 <label class="active" for="first_name">First Name</label>
               </div>
             </div>
             
             <div class="row">
               <div class="input-field col s3">
-                <input id="lastname" type="text" class="validate" name="lastname" required="required">
+                <input id="lastname" type="text" class="validate" name="lastname" value="<?php echo $lastname;?>" required="required">
                 <label class="active" for="Last_name">Last Name</label>
               </div>
             </div>
             
             <div class="row">
               <div class="input-field col s6">
-                <input id="contact" type="text" class="validate" name="mobile" required="required">
+                <input id="contact" type="text" class="validate" name="mobile" value="<?php echo $mobile;?>" required="required">
                 <label class="active" for="contact">Mobile No.</label>
               </div>
             </div>
             
             <div class="row">
               <div class="input-field col s6">
-                <input id="password" type="password" class="validate" name="pass" required="required">
+                <input id="password" type="password" class="validate" name="pass" value="<?php echo $passcode;?>" required="required">
                 <label class="active" for="password">Password</label>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s6">
-                <input id="confirm_password" type="password" class="validate" required="required">
+                <input id="confirm_password" type="password" class="validate" value="<?php echo $passcode;?>" required="required">
                 <label class="active" for="confirm_password">Re-Type Password</label>
               </div>
             </div>
