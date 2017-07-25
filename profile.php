@@ -5,10 +5,10 @@
 	<title>Profile : </title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="img/small-logo.png"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 	
@@ -23,9 +23,7 @@
                 <input id="first_name" type="text" class="validate" name="firstname" value="<?php echo $firstname;?>" required="required">
                 <label class="active" for="first_name">First Name</label>
               </div>
-            </div>
             
-            <div class="row">
               <div class="input-field col s3">
                 <input id="lastname" type="text" class="validate" name="lastname" value="<?php echo $lastname;?>" required="required">
                 <label class="active" for="Last_name">Last Name</label>

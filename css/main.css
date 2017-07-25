@@ -89,3 +89,46 @@ form {
 button {
     float: right;
 }
+
+
+.display-post {
+    background : #1a3e50;
+    padding: 16px;
+}
+.card img {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 42px;
+    float: left;
+    margin-right: 12px;
+}
+
+.card .card-title {
+    font-size: 18px;
+    color : #662990;
+    font-weight: inherit;
+}
+.card h6 {
+    line-height: 24px;
+}
+.card .additional {
+    color : #139dcb;
+    padding: 0 4px;
+    margin : 0px;
+}
+
+
+.card .delete-form {
+    padding: 0px;
+}
+
+.card .delete-btn {
+    background: transparent;
+    border: 0;
+    color: #538ee6;
+}
+
+
+.profile-section {
+    background: #1a3e50;
+}

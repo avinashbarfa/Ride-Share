@@ -4,16 +4,14 @@
 	<title>Register | Sybmi Share </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="img/small-logo.png"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
- <div class="nav-section">
-    <a href="index.php">Share #Ride</a>
-  </div>
 
+    <?php include 'navigation.php';?>
 	  <div class="register-section">
       <div class="container">
         <div class="signup-screen">

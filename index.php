@@ -4,37 +4,114 @@
 	<title>Login :</title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="img/small-logo.png"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
-<body>
-  
-  
-<nav class="white" role="navigation">
+<body>  
+  <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href="#" class="brand-logo">Share Ride</a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn" href="#modal1">Login</a></li>
-        <!-- Modal Structure -->
-          <div id="modal1" class="modal">
-            <div class="modal-content">
-              <h4>Modal Header</h4>
-              <p>A bunch of text</p>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
-          </div>
+        <li><a class="waves-effect waves-light btn modal-trigger" data-target="login-modal">Login</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" data-target="getstarted-modal">Register</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="">Login</a></li>
+        <li><a class="modal-trigger" data-target="login-modal">Login</a></li>
+        <li><a class="modal-trigger" data-target="getstarted-modal">Register</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+
+   <div class="container">
+    <!-- Login Modal Structure -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h4>Login</h4>
+            <form method="POST" action="loginUser.php">            
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="contact" type="text" class="validate" name="username" required="required">
+                <label class="active" for="contact">Mobile No.</label>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="password" type="password" class="validate" name="pass" required="required">
+                <label class="active" for="password">Password</label>
+              </div>
+            </div>
+
+            <button class="btn waves-effect waves-light" type="submit" name="action" id="register">Register
+              <i class="material-icons right">send</i>
+            </button>
+             <p>Not a member? <a href="register.php">Sign Up now.</a></p>
+             
+          </form> 
+        </div>
+        <!--div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Yes</a>
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No</a>
+        </div-->
+    </div>
+    <!--modal for GET STARTED -->
+    <div id="getstarted-modal" class="modal">
+        <div class="modal-content">
+            <h4>Sign Up !!</h4>
+            <form method="POST" action="registerUser.php">            
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="first_name" type="text" class="validate" name="firstname" required="required">
+                  <label class="active" for="first_name">First Name</label>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="lastname" type="text" class="validate" name="lastname" required="required">
+                  <label class="active" for="Last_name">Last Name</label>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="contact" type="text" class="validate" name="mobile" required="required">
+                  <label class="active" for="contact">Mobile No.</label>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate" name="pass" required="required">
+                  <label class="active" for="password">Password</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="confirm_password" type="password" class="validate" required="required">
+                  <label class="active" for="confirm_password">Re-Type Password</label>
+                </div>
+              </div>
+
+              <button class="btn waves-effect waves-light" type="submit" name="action" id="register">Register
+                <i class="material-icons right">send</i>
+              </button>    
+              <p>Already a member? <a href="index.php">Sign In now.</a></p>
+          </form> 
+        </div>
+        <!--div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Yes</a>
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No</a>
+        </div-->
+    </div>
+  </div>
+  
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
@@ -45,7 +122,7 @@
           <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
         </div>
         <div class="row center">
-          <a href="register.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+          <a data-target="getstarted-modal" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger">Get Started</a>
         </div>
         <br><br>
 
@@ -117,7 +194,6 @@
     </div>
   </div>
 
-
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -164,17 +240,18 @@
       </div>
     </div>
   </footer>
-
-
-
-
 </body>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/init.js"></script>
-  <script type="text/javascript">
-      
-  $('#modal1').modal('open');
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/js/materialize.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+
+    $(document).ready(function () {
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+
+    });
   </script>
 </html>
