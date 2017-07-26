@@ -56,6 +56,25 @@
             </div>
 
             <div class="row">
+                <div class="input-field col s6">
+                  <select name="vtype" required>
+                      <option>2 wheeler</option>
+                      <option>4 Wheeler</option>
+                  </select>
+                  <label>Vechile Type</label>
+                </div>
+            
+                <div class="input-field col s6">
+                  <select name="capacity" required>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                  </select>
+                  <label>Capacity</label>
+                </div>
+            </div>
+            <div class="row">
               <div class="input-field col s12">
                 <textarea id="textarea1" class="materialize-textarea" data-length="120" name="add-info"></textarea>
                 <label for="textarea1">Addition Information (optional)</label>

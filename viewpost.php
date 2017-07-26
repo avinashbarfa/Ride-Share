@@ -13,7 +13,10 @@
          $userid = $row["userid"];
          $d_date = $row["pdate"];
          $d_time = $row["ptime"];
-         $additional = $row["additional_details"];   
+         $v_type = $row["vechile_type"];
+         $capacity = $row["capacity"];
+         $additional = $row["additional_details"];
+
           
 
           $location_query = "SELECT name FROM location WHERE location_id = $from";
@@ -47,6 +50,10 @@
               <span class="card-title activator"><?php echo $name?><i class="material-icons right">more_vert</i></span>
               <span>Trip : <?php echo $from." To ".$to?></span>
               <p>Depature : <?php echo  $d_date.' '.$d_time;?></p>
+              <div class="row">
+                  <p>Vechile Type : <?php echo $v_type?></p>
+                  <p>Capactiy : <?php echo $capacity;?></p>
+               </div>
               <p style="padding-top: 10px;"><a href="tel:<?php echo $mobile?>"><i class="material-icons">local_phone</i></a></p>
             </div>
             <div class="card-reveal">
