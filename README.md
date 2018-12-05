@@ -34,6 +34,6 @@ If you run into problems, or have ideas about how to make this process simpler, 
  
     `$ cd Ride-Share`
 
-#Authors
+# Authors
 
 [Avinash Barfa](https://github.com/avinashbarfa)
